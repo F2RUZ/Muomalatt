@@ -1,0 +1,91 @@
+.say {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  &__container {
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 574px;
+    height: 128px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+    color: #686868;
+  }
+
+  &__slider {
+    width: 1178px;
+    height: 400px;
+  }
+
+  .slider-container {
+    // max-width: 100%;
+    width: 1178px;
+  }
+
+  &__cards {
+    display: flex !important;
+    flex-direction: column;
+    padding: 35px;
+    gap: 20px;
+    width: 366px !important;
+    height: 330px;
+    background: #f6f8f9 !important;
+    box-shadow: 81px 94px 50px rgba(135, 135, 135, 0.02),
+      46px 53px 42px rgba(135, 135, 135, 0.06),
+      20px 23px 31px rgba(135, 135, 135, 0.1),
+      5px 6px 17px rgba(135, 135, 135, 0.11);
+    border-radius: 10px;
+
+    &__text {
+      width: 294px;
+      height: 182px;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 26px;
+      color: #686868;
+    }
+
+    &__flex {
+      display: flex;
+      align-items: center;
+      padding: 0px;
+      gap: 16px;
+      width: 296px;
+      height: 58px;
+
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 26px;
+        color: #686868;
+      }
+    }
+  }
+  .slick-track {
+    width: 1178px * 3 !important;
+    height: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+}
