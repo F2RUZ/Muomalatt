@@ -6,6 +6,8 @@ import Ourteam from "../Components/UI/Ourteam/Ourteam";
 import Partners from "../Components/UI/Partners/Partners";
 import Ourmedia from "../Components/UI/Ourmedia/Ourmedia";
 import Say from "../Components/UI/Say/Say";
+import Asked from "../Components/UI/Asked/Asked";
+import Consultation from "../Components/UI/Consultation/Consultation";
 
 const Home = () => {
   return (
@@ -16,6 +18,8 @@ const Home = () => {
       <Partners />
       <Ourmedia />
       <Say />
+      <Asked />
+      <Consultation />
     </div>
   );
 };
