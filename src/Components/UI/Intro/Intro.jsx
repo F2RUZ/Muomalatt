@@ -1,11 +1,11 @@
 import React from "react";
 import "./intro.scss";
-import yigit from "../../../assets/img/yigit.png";
-import calendar from "../../../assets/img/calendar.png";
+import yigit from "../../../assets/yigit.png";
+import calendar from "../../../assets/calendar.png";
 import { IoIosStar, IoIosStarHalf } from "react-icons/io";
-import odam3 from "../../../assets/img/odam3.png";
-import odam4 from "../../../assets/img/odam4.png";
-import odam5 from "../../../assets/img/odam5.png";
+import odam3 from "../../../assets/odam3.png";
+import odam4 from "../../../assets/odam4.png";
+import odam5 from "../../../assets/odam5.png";
 import Slider from "react-slick";
 
 const Intro = () => {

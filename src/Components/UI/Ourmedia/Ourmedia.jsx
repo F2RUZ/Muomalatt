@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FaPlay, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./ourmedia.scss";
-import jamoa from "../../../assets/img/jamoa.png";
-import jamoa2 from "../../../assets/img/jamoa2.png";
-import kitobxon from "../../../assets/img/kitobxon.png";
+import jamoa from "../../../assets/jamoa.png";
+import jamoa2 from "../../../assets/jamoa2.png";
+import kitobxon from "../../../assets/kitobxon.png";
 
 const mediaData = [
   { image: jamoa, title: "Why Islamic finance?" },

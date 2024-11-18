@@ -2,7 +2,7 @@ import React from "react";
 import "./consultation.scss";
 import Slider from "react-slick";
 import { FaAngleDown } from "react-icons/fa";
-import eng from "../../../assets/img/eng.png";
+import eng from "../../../assets/eng.png";
 
 const Consultation = () => {
   const settings = {

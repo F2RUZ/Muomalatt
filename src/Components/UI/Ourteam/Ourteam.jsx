@@ -4,7 +4,7 @@ import { TbBrandTelegram } from "react-icons/tb";
 import { FaInstagram } from "react-icons/fa";
 import { FiFacebook } from "react-icons/fi";
 import { PiTwitterLogo } from "react-icons/pi";
-import moylovodam1 from "../../../assets/img/moylovodam1.png";
+import moylovodam1 from "../../../assets/moylovodam1.png";
 import "./ourteam.scss";
 
 const Ourteam = () => {

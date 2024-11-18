@@ -1,6 +1,6 @@
 import React from "react";
 import "./say.scss";
-import odam7 from "../../../assets/img/odam7.png";
+import odam7 from "../../../assets/odam7.png";
 import Slider from "react-slick";
 
 const Say = () => {

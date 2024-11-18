@@ -1,10 +1,10 @@
 import React from "react";
 import "./partners.scss";
-import american from "../../../assets/img/american.png";
-import stripe from "../../../assets/img/Stripe.png";
-import western from "../../../assets/img/westernunion.png";
-import klarna from "../../../assets/img/klarna.png";
-import skrill from "../../../assets/img/Skrill.png";
+import american from "../../../assets/american.png";
+import stripe from "../../../assets/Stripe.png";
+import western from "../../../assets/westernunion.png";
+import klarna from "../../../assets/klarna.png";
+import skrill from "../../../assets/Skrill.png";
 import Slider from "react-slick";
 
 const Partners = () => {
