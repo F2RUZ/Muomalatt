@@ -1,7 +1,7 @@
 import React from "react";
 import "./navbar.scss";
-import logo from "../../assets/img/Logo(1).png";
-import eng from "../../assets/img/eng.png";
+import logo from "../../assets/Logo(1).png";
+import eng from "../../assets/eng.png";
 import { NavLink } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 
