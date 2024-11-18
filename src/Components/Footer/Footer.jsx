@@ -2,7 +2,7 @@ import React from "react";
 import "./footer.scss";
 import { NavLink } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-import logo from "../../assets/logo.png"; // Fayl yo'li to'g'ri ekanligiga ishonch hosil qiling.
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
