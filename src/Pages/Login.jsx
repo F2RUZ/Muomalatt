@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/signin.scss";
 import "../styles/login.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import chol from "../assets/img/chol1.png";
@@ -19,6 +19,7 @@ const Login = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+  const navigate = useNavigate();
 
   const validateForm = () => {
     const { name, email, country } = formData;
@@ -41,6 +42,7 @@ const Login = () => {
     e.preventDefault();
     if (validateForm()) {
       toast.success("Form submitted successfully!");
+      navigate("/home");
       localStorage.setItem("tokenjon", "bahodirnurmatov");
       localStorage.setItem("token", "bahodir12345");
     }

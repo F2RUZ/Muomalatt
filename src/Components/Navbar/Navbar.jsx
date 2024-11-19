@@ -11,13 +11,13 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar__container">
           <div className="navbar__logo">
-            <NavLink to={"/"}>
+            <NavLink to={"/home"}>
               <img src={logo} alt="Logo" />
             </NavLink>
           </div>
           <div className="navbar__links">
             <li className="navbar__li">
-              <NavLink to="/" id="active">
+              <NavLink to="/home" id="active">
                 Home
               </NavLink>
             </li>
@@ -38,9 +38,9 @@ const Navbar = () => {
               <img src={eng} alt="English" /> ENG <FaChevronDown />
             </div>
             <div className="navbar__line"></div>
-            <button className="navbar__btn">
-              <NavLink to={"/login"}>Sign in</NavLink>
-            </button>
+            <NavLink to={"/login"}>
+              <button className="navbar__btn">Log in</button>
+            </NavLink>
           </div>
         </div>
       </div>

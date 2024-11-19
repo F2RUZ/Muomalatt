@@ -10,11 +10,11 @@ const Footer = () => {
       <div className="container">
         <div className="footer__container">
           <div className="footer__top">
-            <div className="footer__logo__wrapper">
+            <NavLink to={"/home"} className="footer__logo__wrapper">
               <img src={logo} alt="" className="footer__logo" />
-            </div>
+            </NavLink>
             <div className="footer__links">
-              <NavLink to={"/"} className="footer__links__link">
+              <NavLink to={"/home"} className="footer__links__link">
                 Home
               </NavLink>
               <NavLink to={"/about"} className="footer__links__link">
