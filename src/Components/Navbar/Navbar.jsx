@@ -38,7 +38,9 @@ const Navbar = () => {
               <img src={eng} alt="English" /> ENG <FaChevronDown />
             </div>
             <div className="navbar__line"></div>
-            <button className="navbar__btn">Sign in</button>
+            <button className="navbar__btn">
+              <NavLink to={"/login"}>Sign in</NavLink>
+            </button>
           </div>
         </div>
       </div>

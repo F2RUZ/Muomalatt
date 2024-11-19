@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../styles/signin.scss";
-import "../styles/login.scss";
 import { NavLink } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -8,11 +7,10 @@ import chol from "../assets/img/chol1.png";
 import logo from "../assets/img/Logo(1).png";
 import illustration from "../assets/img/illustration.png";
 
-const Login = () => {
+const Signin = () => {
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
-    country: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -21,17 +19,13 @@ const Login = () => {
   };
 
   const validateForm = () => {
-    const { name, email, country } = formData;
-    if (!name.trim()) {
-      toast.error("Name is required");
-      return false;
-    }
+    const { email, password } = formData;
     if (!email.trim() || !/^\S+@\S+\.\S+$/.test(email)) {
-      toast.error("Valid email is required");
+      toast.error("Please enter a valid email");
       return false;
     }
-    if (!country.trim()) {
-      toast.error("Country is required");
+    if (!password.trim() || password.length < 6) {
+      toast.error("Password must be at least 6 characters");
       return false;
     }
     return true;
@@ -40,9 +34,8 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      toast.success("Form submitted successfully!");
+      toast.success("Signed in successfully!");
       localStorage.setItem("tokenjon", "bahodirnurmatov");
-      localStorage.setItem("token", "bahodir12345");
     }
   };
 
@@ -64,21 +57,7 @@ const Login = () => {
           </div>
         </div>
         <h1 className="sign__title">Get started</h1>
-        <form className="sign__form" id="loginform" onSubmit={handleSubmit}>
-          <span>
-            Already have an account?
-            <NavLink className="sign__link" to="/signin">
-              Sign in
-            </NavLink>
-          </span>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-            required
-          />
+        <form className="sign__form" onSubmit={handleSubmit}>
           <input
             type="email"
             name="email"
@@ -88,16 +67,19 @@ const Login = () => {
             required
           />
           <input
-            type="text"
-            name="country"
-            value={formData.country}
+            type="password"
+            name="password"
+            value={formData.password}
             onChange={handleChange}
-            placeholder="Country"
+            placeholder="Password"
             required
           />
           <button type="submit" className="sign__btn">
-            Log in
+            Sign in
           </button>
+          <NavLink className="sign__link" to="/login">
+            Create a new account!
+          </NavLink>
         </form>
       </div>
       <div className="sign__right">
@@ -114,4 +96,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signin;

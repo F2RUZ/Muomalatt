@@ -1,0 +1,28 @@
+.sign {
+  #loginform {
+    gap: 20px;
+  }
+  &__form {
+    span {
+      display: flex;
+      align-items: center;
+      gap: 19px;
+      height: 31px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 31px;
+      color: #8f8f8f;
+
+      .sign__link {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 31px;
+        color: #009688;
+      }
+    }
+  }
+}
