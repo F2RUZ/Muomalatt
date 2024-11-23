@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/signin.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import chol from "../assets/img/chol1.png";
@@ -12,6 +12,8 @@ const Signin = () => {
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,8 +36,11 @@ const Signin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      toast.success("Signed in successfully!");
-      localStorage.setItem("tokenjon", "bahodirnurmatov");
+      localStorage.setItem("token", "bahodir12345");
+      setTimeout(() => {
+        toast.success("Signed in successfully!");
+      }, 800);
+      navigate("/home");
     }
   };
 

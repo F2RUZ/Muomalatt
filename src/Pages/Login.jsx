@@ -41,10 +41,12 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      toast.success("Form submitted successfully!");
-      navigate("/home");
       localStorage.setItem("tokenjon", "bahodirnurmatov");
       localStorage.setItem("token", "bahodir12345");
+      setTimeout(() => {
+        toast.success("Logged in successfully!");
+      }, 800);
+      navigate("/home");
     }
   };
 

@@ -9,22 +9,31 @@ const mediaData = [
   { image: jamoa, title: "Why Islamic finance?" },
   { image: jamoa2, title: "What makes Islamic finance unique?" },
   { image: kitobxon, title: "How is risk managed in Islamic finance?" },
+  { image: jamoa, title: "Why Islamic finance?" },
+  { image: jamoa2, title: "What makes Islamic finance unique?" },
+  { image: kitobxon, title: "How is risk managed in Islamic finance?" },
 ];
 
 const Ourmedia = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? mediaData.length - 1 : prevIndex - 1
-    );
+    if (currentIndex > 0) {
+      setCurrentIndex((prevIndex) => prevIndex - 1);
+    }
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === mediaData.length - 1 ? 0 : prevIndex + 1
-    );
+    if (currentIndex < mediaData.length - 3) {
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }
   };
+
+  const visibleCards = [
+    mediaData[currentIndex],
+    mediaData[currentIndex + 1],
+    mediaData[currentIndex + 2],
+  ];
 
   return (
     <div className="ourmedia">
@@ -35,28 +44,29 @@ const Ourmedia = () => {
             <div className="ourmedia__flex">
               <h3 className="ourmedia__slider__title">Our media showcase</h3>
               <div className="ourmedia__controls">
-                <button className="ourmedia__control left" onClick={handlePrev}>
+                <button
+                  className={`ourmedia__control left ${
+                    currentIndex === 0 ? "disabled" : ""
+                  }`}
+                  onClick={handlePrev}
+                  disabled={currentIndex === 0}
+                >
                   <FaArrowLeft />
                 </button>
                 <button
-                  className="ourmedia__control right"
+                  className={`ourmedia__control right ${
+                    currentIndex >= mediaData.length - 3 ? "disabled" : ""
+                  }`}
                   onClick={handleNext}
+                  disabled={currentIndex >= mediaData.length - 3}
                 >
                   <FaArrowRight />
                 </button>
               </div>
             </div>
             <div className="ourmedia__cards">
-              {mediaData.map((item, index) => (
-                <div
-                  className={`ourmedia__card ${
-                    index === currentIndex ? "active" : "inactive"
-                  }`}
-                  key={index}
-                  style={{
-                    transform: `translateX(${(index - currentIndex) * 100}%)`,
-                  }}
-                >
+              {visibleCards.map((item, index) => (
+                <div className="ourmedia__card" key={index}>
                   <img src={item.image} alt={item.title} />
                   <div className="ourmedia__card__overlay">
                     <p>{item.title}</p>

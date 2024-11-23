@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-import Login from "../../Pages/Login";
+import Signin from "../../Pages/Signin";
 
 const Layout = () => {
   const token = localStorage.getItem("token");
@@ -45,7 +45,7 @@ const Layout = () => {
     } else if (tokenjon?.includes("bahodirnurmatov")) {
       return (
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Signin />} />
         </Routes>
       );
     } else {
